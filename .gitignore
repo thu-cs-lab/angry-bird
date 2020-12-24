@@ -1,0 +1,14 @@
+/autom4te.cache/
+/doc/*.html
+/obj/
+/Makefile
+/bird
+/birdc
+/birdcl
+/bird.conf
+/bird.log
+/config.log
+/config.status
+/configure
+/sysdep/autoconf.h.in
+/sysdep/autoconf.h.in~
