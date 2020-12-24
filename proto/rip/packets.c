@@ -647,7 +647,7 @@ rip_receive_response(struct rip_proto *p, struct rip_iface *ifa, struct rip_pack
     continue;
 
   skip:
-    LOG_RTE("Ignoring route %I/%d received from %I - %s",
+    LOG_RTE(C_RED "Ignoring route %I/%d received from %I - %s" C_RESET,
 	    rte.prefix, rte.pxlen, from->nbr->addr, err_dsc);
   }
 }
@@ -723,7 +723,7 @@ rip_rx_hook(sock *sk, uint len)
   return 1;
 
 drop:
-  LOG_PKT("Bad packet from %I via %s - %s (%u)",
+  LOG_PKT(C_RED "Bad packet from %I via %s - %s (%u)" C_RESET,
 	  sk->faddr, sk->iface->name, err_dsc, err_val);
 
   return 1;

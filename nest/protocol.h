@@ -403,6 +403,10 @@ void proto_notify_state(struct proto *p, unsigned state);
 #define D_EVENTS 16		/* Protocol events */
 #define D_PACKETS 32		/* Packets sent/received */
 
+// terminal colors
+#define C_RESET "\033[0m"
+#define C_RED "\033[31m"
+
 #ifndef PARSER
 #define TRACE(flags, msg, args...) \
   do { if (p->p.debug & flags) log(L_TRACE "%s: " msg, p->p.name , ## args ); } while(0)
